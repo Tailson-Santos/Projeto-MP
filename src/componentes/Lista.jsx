@@ -11,7 +11,11 @@ export function Lista({ cidades = [], toggleFavorito }) {
     return (
       <div>
         {/* Header */}
+        <div className="bg-yellow-300">
+            <strong><p>Lista de cidades atendidas</p></strong>
+        </div>
         <div className="grid grid-cols-3 bg-gray-200 p-2 font-bold sticky top-0 z-10">
+          
           <span>Cidade</span>
           <span className="text-center">Dias</span>
           <span className="text-right">Fav</span>
