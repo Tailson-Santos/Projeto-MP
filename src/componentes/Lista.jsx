@@ -14,11 +14,11 @@ export function Lista({ cidades = [], toggleFavorito }) {
         <div className="bg-yellow-300">
             <strong><p>Lista de cidades atendidas</p></strong>
         </div>
-        <div className="grid grid-cols-3 bg-gray-200 p-2 font-bold sticky top-0 z-10">
+        <div className="grid grid-cols-2 bg-gray-300 p-1 font-bold sticky top-0 z-10">
           
           <span>Cidade</span>
-          <span className="text-center">Dias</span>
-          <span className="text-right">Fav</span>
+          <span className="text-center">Dias (Uteis)</span>
+          
         </div>
 
         {/* Itens */}
@@ -32,7 +32,7 @@ export function Lista({ cidades = [], toggleFavorito }) {
           return (
             <div
               key={cidade.id}
-              className="grid grid-cols-3 p-2 border-b bg-white hover:bg-gray-100 font-light"
+              className="grid grid-cols-2 p-2 border-b bg-white hover:bg-gray-100 font-light"
             >
               {/* Link Desktop */}
               <a
@@ -58,14 +58,7 @@ export function Lista({ cidades = [], toggleFavorito }) {
 
               <span className="text-center">{cidade.dias}</span>
 
-              <span
-                onClick={() => toggleFavorito(cidade.id)}
-                className={`text-right material-symbols-outlined cursor-pointer ${
-                  cidade.favorito ? "text-yellow-400" : "text-gray-400"
-                }`}
-              >
-                star
-              </span>
+             
             </div>
           );
         })}

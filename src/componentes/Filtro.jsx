@@ -9,7 +9,7 @@ export function Filtro({
   const inputSizeStyle = "border p-1 rounded"
   return (
 
-    <div className="p-4 flex flex-wrap gap-2">
+    <div className=" fixed bottom-0 left-0 w-full bg-black p-4 shadow-md md:static">
 
       <input
         type="text"
@@ -30,12 +30,7 @@ export function Filtro({
         <option value="dias-decrescente">Dias ↓</option>
       </select>
 
-      <button
-        onClick={() => setMostrarFavoritos(!mostrarFavoritos)}
-        className={inputSizeStyle}
-      >
-        {mostrarFavoritos ? "Todos" : "Só Favoritos"}
-      </button>
+  
 
     </div>
   )
